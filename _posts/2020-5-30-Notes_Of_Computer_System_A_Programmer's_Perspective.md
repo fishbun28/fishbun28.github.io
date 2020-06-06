@@ -6,7 +6,7 @@ categories:
 tags:
  - 操作系统
 ---
-
+# 开始
 ## 第一章 计算机系统漫游
 
 这一章通过研究"hello, world"这个简单程序的生命周期, 介绍计算机系统的主要概念和主题
@@ -77,4 +77,14 @@ return O;
 大端法 : 最高有效字节在前面(地址较小)
 
 ![](https://fishbun-blogimages.oss-cn-beijing.aliyuncs.com/blog_img/20200605152049.png)
+
+### 移位操作 逻辑右移与算数右移
+逻辑右移补0, 而算数右移补最高有效位
+![](https://fishbun-blogimages.oss-cn-beijing.aliyuncs.com/blog_img/20200606230532.png)
+
+**补充**
+
+在 C 语言中, 如果在移动 k 位时, k 的值很大会怎么样呢?
+
+事实上, 在 C 语言中, 当移动一个 w 位的值时, 移位指令只考虑位移量的低$log_2w$位, 也就是说, 位移量是通过取模得到的, 因此得到的位移量不可能大于位数
 
